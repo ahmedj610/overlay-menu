@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+@import "compass/css3";
 
 * {
     margin: 0;
@@ -85,7 +86,8 @@
     justify-content: center;
     text-align: center;
     z-index: 100;
-    /* transition: 0.25s; */
+    /* transition: 1s;
+    top: 0; */
     animation: fade-in 5s;
     overflow-x: hidden;
     position: fixed;
@@ -94,7 +96,7 @@
 }
 
 @keyframes fade-in {
-    0% {opacity: 0;}
+    0% {opacity: 0.25;}
     100% {opacity: 1;}
 }
 
@@ -107,7 +109,8 @@
     justify-content: center;
     text-align: center;
     z-index: 100;
-    /* transition: 0.25s;*/
+    /* transition: 1s;
+    top: 0; */
     animation: fade-in 5s;
     overflow-x: hidden;
     position: fixed;
@@ -150,8 +153,15 @@
     /* height: 0; */
     padding-left: 5px;
     overflow: hidden;
-    transition: all 0.5s;
+    /* transition: all 1s ease-in-out;
+    min-height: 0; */
 }
+
+.overlay-content div ul li ul:target, .overlay-content--hidden div ul li ul:target {
+    /* min-height: 100%; */
+}
+
+
 
 .hidden {
     display: none;
@@ -162,3 +172,4 @@
     display: block;
     /* height: 100%; */
 }
+
