@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+
+* {
+    margin: 0;
+}
+
+.wrap2 {
+    display: none;
+}
+
+.wrap {
+    width: 55px;
+    height: 55px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000000;
+    position: relative;
+    background: #fff;
+}
+
+.wrap button {
+    background-color: transparent;
+    border: none;
+}
+
+.wrap span {
+    margin-top: 15px;
+    margin-left: -13px;
+}
+
+.icon--bar {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background: #333;
+    position: absolute;
+    transition: transform .5s ease-in-out,top .25s ease-in-out .5s,opacity .25s ease-in-out .5s;
+    transform-origin: center;
+}
+
+.--top {
+    top: 3px;
+}
+
+.--middle {
+    top: 11px;
+    width: 20px;
+}
+
+.--bottom {
+    top: 19px;
+}
+
+.menu-toggle.activated .icon--bar {
+    transition: transform .5s ease-in-out .3s,top .25s ease-in-out,opacity .25s ease-in-out;
+}
+
+.menu-toggle.activated .icon--bar.--top{
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.menu-toggle.activated .icon--bar.--middle{
+    opacity: 0;
+}
+
+.menu-toggle.activated .icon--bar.--bottom{
+    top: 9px;
+    transform: rotate(225deg);
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.overlay-content--hidden {
+    background-color: #E3C5B8;
+    min-height: 100vh;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 100;
+    /* transition: 0.25s; */
+    animation: fade-in 5s;
+    overflow-x: hidden;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.overlay-content {
+    background-color: #E3C5B8;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 100;
+    /* transition: 0.25s;*/
+    animation: fade-in 5s;
+    overflow-x: hidden;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.overlay-content div, .overlay-content--hidden div {
+    width: 60%;
+    margin-left: 0;
+    /* padding-left: 300px; */
+}
+
+.overlay-content div ul, .overlay-content--hidden div ul {
+    list-style: none;
+    line-height: 2.5rem;
+    padding-left: 0;
+}
+
+.overlay-content div ul li a, .overlay-content--hidden div ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.overlay-content div ul li i, .overlay-content--hidden div ul li i {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 0 10px;
+    transition: transform .25s ease-in-out;
+    /* transform: rotate(180deg); */
+}
+
+.overlay-content div ul li ul, .overlay-content--hidden div ul li ul {
+    padding: 0;
+    /* height: 0; */
+    padding-left: 5px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.hidden {
+    display: none;
+    /* height: 0; */
+}
+
+.shown {
+    display: block;
+    /* height: 100%; */
+}
