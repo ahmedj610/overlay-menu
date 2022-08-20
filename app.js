@@ -1,3 +1,5 @@
+// Goal: to make this pixel perfect when I'm expert enough! ~ 20/08/22, Saturday
+
 const main = document.querySelector(".click");
 const content = document.querySelector(".hidden");
 
