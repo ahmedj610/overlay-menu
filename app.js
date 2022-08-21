@@ -9,7 +9,7 @@ main.addEventListener("click", function() {
     if(content.classList.contains('hidden')) {
         content.classList.add('shown');
         content.classList.remove('hidden');
-        document.querySelector(".overlay-content div ul li i").classList.add('rotate')
+        document.querySelector(".overlay-content div ul li i").classList.add('rotate');
     } else if (content.classList.contains('shown')) {
         content.classList.add('hidden');
         content.classList.remove('shown');
@@ -34,6 +34,9 @@ menuBtn.addEventListener("click", function() {
     // document.querySelector(".overlay-content").classList.toggle("overlay-content");
 })
 
+
+
+
 // menuBtn.addEventListener("click", function() {
 //         const div = document.querySelector(".overlay-content");
 //         if (div.style.display !== 'none') {
@@ -56,3 +59,4 @@ function closeNav() {
     
     document.querySelector(".overlay-content--hidden").classList.toggle("overlay-content--hidden");
 }
+
